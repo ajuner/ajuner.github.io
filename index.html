@@ -4,8 +4,266 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>test</title>
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+html, body {
+  background: #FCEEB5;
+  font-family: Abel, Arial, Verdana, sans-serif;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.card {
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card .additional {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(#dE685E, #EE786E);
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card.green .additional {
+  background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
+
+.card:hover .additional {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.card .additional .user-card {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.card .additional .user-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -2px;
+  height: 80%;
+  border-left: 2px solid rgba(0,0,0,0.025);
+}
+
+.card .additional .user-card .level,
+.card .additional .user-card .points {
+  text-align: center;
+  top: 15%;
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgba(0,0,0,0.15);
+  padding: 0.125rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.card .additional .user-card .points {
+  top: 85%;
+}
+
+.card .additional .user-card svg {
+  top: 50%;
+}
+
+.card .additional .more-info {
+  width: 450px;
+  float: left;
+  position: absolute;
+  left: 150px;
+  height: 100%;
+}
+
+.card .additional .more-info h1 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.card.green .additional .more-info h1 {
+  color: #224C36;
+}
+
+.card .additional .coords {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card.green .additional .coords {
+  color: #325C46;
+}
+
+.card .additional .coords span + span {
+  float: right;
+}
+
+.card .additional .stats {
+  font-size: 2rem;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  top: auto;
+  color: #fff;
+}
+
+.card .additional .stats > div {
+  flex: 1;
+  text-align: center;
+}
+
+.card .additional .stats i {
+  display: block;
+}
+
+.card .additional .stats div.title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card .additional .stats div.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.card .additional .stats div.value.infinity {
+  font-size: 2.5rem;
+}
+
+.card .general {
+  width: 450px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.card .general .more {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9em;
+}
+
+.card-text {
+  text-align: center;
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgba(0,0,0,0.15);
+  padding: 0.125rem 0.75rem;
+  white-space: nowrap;
+}
+
+  </style>
 </head>
 <body>
-  test
+  <div class="center">
+
+    <div class="card">
+      <div class="additional">
+        <div class="user-card">
+          <div class="level center">
+            Web engineer
+          </div>
+          <div class="center" style="top: 50%">
+            <img style="border-radius: 999px;margin-bottom: 10%;" src="https://avatars1.githubusercontent.com/u/53512912?s=100&u=63fc3eb6eaa3bf9871bd1ac16f8b6ee1d847a968&v=4" alt="">
+            <div class="card-text">
+              This is my cat
+            </div>
+            <div class="card-text">
+              that annoys me
+            </div>
+            <div class="card-text">
+              every day!
+            </div>
+          </div>
+        </div>
+        <div class="more-info">
+          <h1>ajuner</h1>
+          <div class="coords">
+            <span>Name</span>
+            <span>Cai jun</span>
+          </div>
+          <div class="coords">
+            <span>Position</span>
+            <span>Ningbo China</span>
+          </div>
+          <div class="coords">
+            <span>Company</span>
+            <span>Loctek</span>
+          </div>
+          <div class="coords">
+            <span>Email</span>
+            <span>106791576@qq.com</span>
+          </div>
+          
+          <div class="stats">
+            <div>
+              <div class="title">Fans</div>
+              <i class="fa fa-trophy"></i>
+              <div class="value">0</div>
+            </div>
+            <div>
+              <div class="title">Idol</div>
+              <i class="fa fa-gamepad"></i>
+              <div class="value infinity">∞</div>
+            </div>
+            <div>
+              <div class="title">Sugar</div>
+              <i class="fa fa-group"></i>
+              <div class="value">0</div>
+            </div>
+            <div>
+              <div class="title">Bug</div>
+              <i class="fa fa-coffee"></i>
+              <div class="value infinity">∞</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="general">
+        <h1>My card</h1>
+        <h3>Hi,I'm ajuner</h3>
+        <p style="font-size: 20px;">A web development engineer who has just entered the industry. I love life and everything around me. I believe that there will be rewards if you pay. Welcome to be friends with me~</p>
+        <span class="more">Mouse over the card for more info</span>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
